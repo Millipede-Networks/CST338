@@ -1,5 +1,3 @@
-
-
 import java.util.Random;
 
 import assignment3.Card.Suit;
