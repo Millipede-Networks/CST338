@@ -8,104 +8,104 @@ public class Assignment3 {
 
 	public static void main(String[] args) {
 		// create 5 instances of Card class
-		/*
-		 * Card newCard = new Card(); Card newCard2 = new Card(); Card newCard3 = new
-		 * Card(); Card newCard4 = new Card(); Card newCard5 = new Card();
-		 * 
-		 * // Adds values to cards, tests set method newCard.set('K', Suit.DIAMONDS);
-		 * newCard2.set('9', Suit.HEARTS); newCard3.set('Q', Suit.CLUBS);
-		 * newCard4.set('3', Suit.SPADES); newCard5.set('A', Suit.SPADES);
-		 * 
-		 * // Tests equals method newCard2.equals(newCard);
-		 * 
-		 * System.out.println("Card 1: " + newCard.toString());
-		 * 
-		 * System.out.println("Card 2: " + newCard2.toString());
-		 * 
-		 * // Break between Card and Hand testing System.out.println();
-		 * 
-		 * // Creates new hand w/ no cards yet Hand myHand = new Hand(0);
-		 * 
-		 * // Test for takeCard method myHand.takeCard(newCard);
-		 * myHand.takeCard(newCard2); myHand.takeCard(newCard3);
-		 * myHand.takeCard(newCard4); myHand.takeCard(newCard5);
-		 * 
-		 * // Displays current hand System.out.println("My hand: " + myHand.toString());
-		 * 
-		 * // Tests valid Hand's inspectCard method System.out.println("3rd card is: " +
-		 * myHand.inspectCard(2));
-		 * 
-		 * // Tests Hand's resetHand method myHand.resetHand();
-		 * System.out.println("Hand is now empty: " + myHand.toString());
-		 * 
-		 * // Tests error flag setting of Hand's inspectCard method Card noCard =
-		 * myHand.inspectCard(3);
-		 * 
-		 * if (noCard.getErrorFlag()) { System.out.println("No card available."); } else
-		 * { System.out.println(noCard.toString()); }
-		 * 
-		 * // Resets hand to original status
-		 * System.out.println("Reseting hand to original status...");
-		 * 
-		 * myHand.takeCard(newCard); myHand.takeCard(newCard2);
-		 * myHand.takeCard(newCard3); myHand.takeCard(newCard4);
-		 * myHand.takeCard(newCard5);
-		 * 
-		 * // Displays hand again System.out.println("Hand is once again: " +
-		 * myHand.toString());
-		 */
-		// Break between Hand and Deck testing
-		System.out.println();
-		// Break is over, back to work
-		//
-		// Start Deck testing
-		//
-		int onePack = 1, twoPacks = 2; // Assign numberOfPacks integer variable to 2
-		Deck twoPackDeck = new Deck(twoPacks); // Instantiate masterDeck
-		// Deal all the cards in a loop until the deck is empty
-		// dealt directly to the display/screen. Display each card as it
-		// comes off the deck.
-		twoPackDeck.init(twoPacks);
-		System.out.println("**A deck has been created with two packs of cards.");
-		System.out.println("**Dealing unshuffled deck... ");
-		for (int i = twoPackDeck.getTopCard(); i >= 0; i--) {
-			System.out.println(twoPackDeck.dealCard());
-		}
 
-		// Next, reset the deck by initializing it again (to the same two packs).
+		Card newCard = new Card(); Card newCard2 = new Card(); Card newCard3 = new
+			Card(); Card newCard4 = new Card(); Card newCard5 = new Card();
 
-		twoPackDeck.init(twoPacks);
+			// Adds values to cards, tests set method newCard.set('K', Suit.DIAMONDS);
+			newCard2.set('9', Suit.HEARTS); newCard3.set('Q', Suit.CLUBS);
+			newCard4.set('3', Suit.SPADES); newCard5.set('A', Suit.SPADES);
 
-		// Shuffle the deck this time,
-		  
-		twoPackDeck.shuffle();
-		
-		// and re-deal to the screen in a
-		// loop again. Notice that the cards are now coming off in a random order.
+			// Tests equals method newCard2.equals(newCard);
 
-		System.out.println("**Dealing shuffled deck... ");
-		for (int i = twoPackDeck.getTopCard(); i >= 0; i--) {
-			System.out.println(twoPackDeck.dealCard());
-		}
+			System.out.println("Card 1: " + newCard.toString());
 
-		// Repeat this double deal, unshuffled, then shuffled,
-		// but this time using a single pack deck
-		Deck onePackDeck = new Deck(onePack);
-		onePackDeck.init(onePack);
-		System.out.println("**A deck has been created with one pack of cards.");
-		System.out.println("**Dealing unshuffled deck...");
-		for (int i = onePackDeck.getTopCard(); i >= 0; i--) {
-			System.out.println(onePackDeck.dealCard());
-		}
+			System.out.println("Card 2: " + newCard2.toString());
 
-		onePackDeck.shuffle();
-		System.out.println("**The deck has been shuffled.");
+			// Break between Card and Hand testing System.out.println();
 
-		System.out.println("**Dealing shuffled deck... ");
-		for (int i = onePackDeck.getTopCard(); i >= 0; i--) {
-			System.out.println(onePackDeck.dealCard());
-		}
-	
+			// Creates new hand w/ no cards yet Hand myHand = new Hand(0);
+
+			// Test for takeCard method myHand.takeCard(newCard);
+			myHand.takeCard(newCard2); myHand.takeCard(newCard3);
+			myHand.takeCard(newCard4); myHand.takeCard(newCard5);
+
+			// Displays current hand System.out.println("My hand: " + myHand.toString());
+
+			// Tests valid Hand's inspectCard method System.out.println("3rd card is: " +
+			myHand.inspectCard(2));
+
+			// Tests Hand's resetHand method myHand.resetHand();
+			System.out.println("Hand is now empty: " + myHand.toString());
+
+			// Tests error flag setting of Hand's inspectCard method Card noCard =
+			myHand.inspectCard(3);
+
+			if (noCard.getErrorFlag()) { System.out.println("No card available."); } else
+			{ System.out.println(noCard.toString()); }
+
+			// Resets hand to original status
+			System.out.println("Reseting hand to original status...");
+
+			myHand.takeCard(newCard); myHand.takeCard(newCard2);
+			myHand.takeCard(newCard3); myHand.takeCard(newCard4);
+			myHand.takeCard(newCard5);
+
+			// Displays hand again System.out.println("Hand is once again: " +
+			myHand.toString());
+
+			// Break between Hand and Deck testing
+			System.out.println();
+			// Break is over, back to work
+			//
+			// Start Deck testing
+			//
+			int onePack = 1, twoPacks = 2; // Assign numberOfPacks integer variable to 2
+			Deck twoPackDeck = new Deck(twoPacks); // Instantiate masterDeck
+			// Deal all the cards in a loop until the deck is empty
+			// dealt directly to the display/screen. Display each card as it
+			// comes off the deck.
+			twoPackDeck.init(twoPacks);
+			System.out.println("**A deck has been created with two packs of cards.");
+			System.out.println("**Dealing unshuffled deck... ");
+			for (int i = twoPackDeck.getTopCard(); i >= 0; i--) {
+				System.out.println(twoPackDeck.dealCard());
+			}
+
+			// Next, reset the deck by initializing it again (to the same two packs).
+
+			twoPackDeck.init(twoPacks);
+
+			// Shuffle the deck this time,
+
+			twoPackDeck.shuffle();
+
+			// and re-deal to the screen in a
+			// loop again. Notice that the cards are now coming off in a random order.
+
+			System.out.println("**Dealing shuffled deck... ");
+			for (int i = twoPackDeck.getTopCard(); i >= 0; i--) {
+				System.out.println(twoPackDeck.dealCard());
+			}
+
+			// Repeat this double deal, unshuffled, then shuffled,
+			// but this time using a single pack deck
+			Deck onePackDeck = new Deck(onePack);
+			onePackDeck.init(onePack);
+			System.out.println("**A deck has been created with one pack of cards.");
+			System.out.println("**Dealing unshuffled deck...");
+			for (int i = onePackDeck.getTopCard(); i >= 0; i--) {
+				System.out.println(onePackDeck.dealCard());
+			}
+
+			onePackDeck.shuffle();
+			System.out.println("**The deck has been shuffled.");
+
+			System.out.println("**Dealing shuffled deck... ");
+			for (int i = onePackDeck.getTopCard(); i >= 0; i--) {
+				System.out.println(onePackDeck.dealCard());
+			}
+
 	}
 
 }// end Assignment3 class
@@ -150,7 +150,7 @@ class Card {
 	@Override
 	public String toString() {
 		if (errorFlag == true) {
-//         System.out.println("Invalid Input");
+			// System.out.println("Invalid Input");
 			return "Invalid Input";
 		}
 
@@ -355,7 +355,7 @@ class Deck { // The Deck class will create two decks of cards.
 	// We shuffle the working copy deck after we create it.
 	// No cards are lost in the shuffle.
 
-// allow a maximum of six packs (6×52 cards)
+	// allow a maximum of six packs (6×52 cards)
 	public static final int MAX_CARDS = 312; // I have been testing 52 cards
 	private static Card[] masterPack; // the unchanging pack of card objects
 	private Card[] cards; // the pack that we copy from the master
@@ -377,10 +377,10 @@ class Deck { // The Deck class will create two decks of cards.
 	}
 
 	public void shuffle() {
-// This method will use a random number generator to
-// determine an integer in the range of zero to the top card.
-// The topCard variable will be used as a means to track
-// the new position of our card swap location.
+		// This method will use a random number generator to
+		// determine an integer in the range of zero to the top card.
+		// The topCard variable will be used as a means to track
+		// the new position of our card swap location.
 
 		Random randPick = new Random(); // Random number generator
 		topCard = cards.length - 1; // Set the top card index position.
@@ -400,15 +400,15 @@ class Deck { // The Deck class will create two decks of cards.
 
 			topCard = topCard - 1; // The top card is now the one below it.
 		}
-// Out of the while loop means that the topCard position had reached 0
-// Thus, we were out of cards to shuffle at that point.
+		// Out of the while loop means that the topCard position had reached 0
+		// Thus, we were out of cards to shuffle at that point.
 		topCard = cards.length - 1; // Reset the top card index position.
 
 	}
 
 	public Card dealCard() { // returns and removes the card in the top
-								// occupied position of cards[]. Make sure
-								// there are still cards available.
+		// occupied position of cards[]. Make sure
+		// there are still cards available.
 		Card dealtCard = cards[this.topCard];
 		this.topCard = topCard - 1; // The top card is now the one below it.
 		return dealtCard;
@@ -442,18 +442,18 @@ class Deck { // The Deck class will create two decks of cards.
 			System.exit(1); // Too many cards requested for Deck
 		}
 		masterPack = new Card[numCards]; // Instantiate a new Card object array
-// loop through the array of objects, assign Suits and Values to each
-// card object. deckSize is used as an index counter and for later
-// when we use it to quickly find four Suit choices and thirteen Value
-// choices.
+		// loop through the array of objects, assign Suits and Values to each
+		// card object. deckSize is used as an index counter and for later
+		// when we use it to quickly find four Suit choices and thirteen Value
+		// choices.
 		for (int deckSize = 0; deckSize < masterPack.length; deckSize++) {
 			masterPack[deckSize] = new Card();
 
-// We know that the deck has (52 * numPacks) cards.
-// Fifty two card decks can be divided by 4 and by 13 (Suits and Values).
-// Use the result of the modulus division between deckSize and 4.
-// The result determines the Suit assigned to the indexed object
-// on masterPack.
+			// We know that the deck has (52 * numPacks) cards.
+			// Fifty two card decks can be divided by 4 and by 13 (Suits and Values).
+			// Use the result of the modulus division between deckSize and 4.
+			// The result determines the Suit assigned to the indexed object
+			// on masterPack.
 			Suit suit;
 			if (deckSize % 4 == 0) {
 				suit = Suit.SPADES;
@@ -465,9 +465,9 @@ class Deck { // The Deck class will create two decks of cards.
 				suit = Suit.CLUBS;
 			}
 
-// Use the result of the modulus division between deckSize and 13.
-// The result is the switchValue which determines the character
-// assigned to card Value, like 'A' for Ace.
+			// Use the result of the modulus division between deckSize and 13.
+			// The result is the switchValue which determines the character
+			// assigned to card Value, like 'A' for Ace.
 
 			int switchValue = deckSize % 13;
 			switch (switchValue) {
