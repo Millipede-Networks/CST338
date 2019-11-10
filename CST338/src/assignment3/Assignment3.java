@@ -1,3 +1,5 @@
+package assignment3;
+
 import java.util.Random;
 
 import assignment3.Card.Suit;
@@ -6,70 +8,52 @@ public class Assignment3 {
 
 	public static void main(String[] args) {
 		// create 5 instances of Card class
-		Card newCard = new Card();
-		Card newCard2 = new Card();
-		Card newCard3 = new Card();
-		Card newCard4 = new Card();
-		Card newCard5 = new Card();
-
-		// Adds values to cards, tests set method
-		newCard.set('K', Suit.DIAMONDS);
-		newCard2.set('9', Suit.HEARTS);
-		newCard3.set('Q', Suit.CLUBS);
-		newCard4.set('3', Suit.SPADES);
-		newCard5.set('A', Suit.SPADES);
-
-		// Tests equals method
-		newCard2.equals(newCard);
-
-		System.out.println("Card 1: " + newCard.toString());
-
-		System.out.println("Card 2: " + newCard2.toString());
-
-		// Break between Card and Hand testing
-		System.out.println();
-
-		// Creates new hand w/ no cards yet
-		Hand myHand = new Hand(0);
-
-		// Test for takeCard method
-		myHand.takeCard(newCard);
-		myHand.takeCard(newCard2);
-		myHand.takeCard(newCard3);
-		myHand.takeCard(newCard4);
-		myHand.takeCard(newCard5);
-
-		// Displays current hand
-		System.out.println("My hand: " + myHand.toString());
-
-		// Tests valid Hand's inspectCard method
-		System.out.println("3rd card is: " + myHand.inspectCard(2));
-
-		// Tests Hand's resetHand method
-		myHand.resetHand();
-		System.out.println("Hand is now empty: " + myHand.toString());
-
-		// Tests error flag setting of Hand's inspectCard method
-		Card noCard = myHand.inspectCard(3);
-
-		if (noCard.getErrorFlag()) {
-			System.out.println("No card available.");
-		} else {
-			System.out.println(noCard.toString());
-		}
-
-		// Resets hand to original status
-		System.out.println("Reseting hand to original status...");
-
-		myHand.takeCard(newCard);
-		myHand.takeCard(newCard2);
-		myHand.takeCard(newCard3);
-		myHand.takeCard(newCard4);
-		myHand.takeCard(newCard5);
-
-		// Displays hand again
-		System.out.println("Hand is once again: " + myHand.toString());
-
+		/*
+		 * Card newCard = new Card(); Card newCard2 = new Card(); Card newCard3 = new
+		 * Card(); Card newCard4 = new Card(); Card newCard5 = new Card();
+		 * 
+		 * // Adds values to cards, tests set method newCard.set('K', Suit.DIAMONDS);
+		 * newCard2.set('9', Suit.HEARTS); newCard3.set('Q', Suit.CLUBS);
+		 * newCard4.set('3', Suit.SPADES); newCard5.set('A', Suit.SPADES);
+		 * 
+		 * // Tests equals method newCard2.equals(newCard);
+		 * 
+		 * System.out.println("Card 1: " + newCard.toString());
+		 * 
+		 * System.out.println("Card 2: " + newCard2.toString());
+		 * 
+		 * // Break between Card and Hand testing System.out.println();
+		 * 
+		 * // Creates new hand w/ no cards yet Hand myHand = new Hand(0);
+		 * 
+		 * // Test for takeCard method myHand.takeCard(newCard);
+		 * myHand.takeCard(newCard2); myHand.takeCard(newCard3);
+		 * myHand.takeCard(newCard4); myHand.takeCard(newCard5);
+		 * 
+		 * // Displays current hand System.out.println("My hand: " + myHand.toString());
+		 * 
+		 * // Tests valid Hand's inspectCard method System.out.println("3rd card is: " +
+		 * myHand.inspectCard(2));
+		 * 
+		 * // Tests Hand's resetHand method myHand.resetHand();
+		 * System.out.println("Hand is now empty: " + myHand.toString());
+		 * 
+		 * // Tests error flag setting of Hand's inspectCard method Card noCard =
+		 * myHand.inspectCard(3);
+		 * 
+		 * if (noCard.getErrorFlag()) { System.out.println("No card available."); } else
+		 * { System.out.println(noCard.toString()); }
+		 * 
+		 * // Resets hand to original status
+		 * System.out.println("Reseting hand to original status...");
+		 * 
+		 * myHand.takeCard(newCard); myHand.takeCard(newCard2);
+		 * myHand.takeCard(newCard3); myHand.takeCard(newCard4);
+		 * myHand.takeCard(newCard5);
+		 * 
+		 * // Displays hand again System.out.println("Hand is once again: " +
+		 * myHand.toString());
+		 */
 		// Break between Hand and Deck testing
 		System.out.println();
 		// Break is over, back to work
